@@ -10,7 +10,7 @@
 
 
 ## Stage 1: Install the nVidia build environment and build a sample app.
-FROM ubuntu:16.04
+FROM ubuntu:xenial-20210114
 
 # OS packages needed
 ARG DEBIAN_FRONTEND=noninteractive
@@ -37,7 +37,7 @@ RUN make
 
 
 ## Stage 2: Copy the built sample app into a clean Ubuntu image.
-FROM ubuntu:16.04
+FROM ubuntu:xenial-20210114
 
 COPY --from=0 /usr/local/cuda-9.1/samples/0_Simple/matrixMulCUBLAS /
 
