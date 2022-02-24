@@ -1,2 +1,2 @@
 # ch-test-scope: full
-FROM python:3-alpine
+FROM python:3.11.0a5-alpine
